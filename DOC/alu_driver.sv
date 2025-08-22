@@ -5,11 +5,11 @@ class alu_driver extends uvm_driver#(alu_sequence_item);
 
   `uvm_component_utils(alu_driver)
 
-  //uvm_analysis_port#(alu_sequence_item) dri_cov_port;
+  
 
   function new(string name="alu_driver",uvm_component parent);
     super.new(name,parent);
-    //dri_cov_port=new("driver_port",this);
+   
   endfunction
 
   virtual function void build_phase(uvm_phase phase);
