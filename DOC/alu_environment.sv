@@ -21,7 +21,7 @@ class alu_environment extends uvm_env;
 
     agent.monitor.mon_port.connect(scoreboard.sco_port);
     agent.monitor.mon_port.connect(coverage.cov_mon);
-    agent.driver.dri_cov_port.connect(coverage.cov_dri);
+    
 
 
       endfunction
