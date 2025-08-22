@@ -5,11 +5,11 @@ class alu_driver extends uvm_driver#(alu_sequence_item);
 
   `uvm_component_utils(alu_driver)
 
-  uvm_analysis_port#(alu_sequence_item) dri_cov_port;
+  //uvm_analysis_port#(alu_sequence_item) dri_cov_port;
 
   function new(string name="alu_driver",uvm_component parent);
     super.new(name,parent);
-    dri_cov_port=new("driver_port",this);
+    //dri_cov_port=new("driver_port",this);
   endfunction
 
   virtual function void build_phase(uvm_phase phase);
@@ -230,7 +230,7 @@ class alu_driver extends uvm_driver#(alu_sequence_item);
                 `uvm_info("DRV",$sformatf("DRIVER DRIVING VALUES TO INTERFACE,INP_VALID =%d,CMD=%d,CE=%d,CIN=%d,MODE=%d,OPA=%d,OPB=%d",req.INP_VALID,req.CMD,req.CE,req.CIN,req.MODE,req.OPA,req.OPB),UVM_NONE);
               end
               req.print();
-      dri_cov_port.write(req);
+      
 
       end
 end
